@@ -1,6 +1,9 @@
-  //myfirst
-  var fs = require('fs')
+var fs = require('fs');
 
-    var buff = fs.readFileSync(process.argv[2])
-    var string = buff.toString().split('\n');
-    console.log(string.length - 1)
+var filename = process.argv[2];
+
+file = fs.readFileSync(filename);
+
+contents = file.toString();
+
+console.log(contents.split('\n').length - 1);
